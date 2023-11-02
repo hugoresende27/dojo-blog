@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <p>Hugo dev</p>
-    <a href="/new">New Home</a>
+
+    <a href="/new">    <button>New Home</button></a>
+    <a href="/final">    <button>Final</button></a>
     <p ref="p">My name is {{ name }} and my age is {{ age }}</p>
     <button @click="handleClick">Click me</button>
     <button @click="age++">Add 1 to age</button> <br>

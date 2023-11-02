@@ -1,11 +1,13 @@
 <template>
   <div class="home">
-    <h1>New</h1>
-    <a href="/">Home</a>
+ 
+    <a href="/">    <button>Home</button></a>
+    <a href="/final">    <button>Final</button></a>
     <p>{{ names }}</p>
-    <div v-for="name in names" :key="name">{{ name }}</div>
+    <div v-for="name in matchingNames" :key="name">{{ name }}</div>
+    <button @click="handleClick">stop watching</button>
 
-    <p>Search term -- {{ search }}</p>
+    <p>Search term &rightarrow; {{ search }}</p>
     <input type="text" v-model="search">
      
    </div>
@@ -13,7 +15,7 @@
 
 <script>
 
-import { computed, ref } from 'vue'
+import { computed, ref, watch, watchEffect} from 'vue'
 
 export default {
   name : 'homenew',
@@ -24,11 +26,27 @@ export default {
     // })
 
     const search = ref('')
-    const names = ref (['a', 'b', 'c', 'd', 'e', 'f'])
+    const names = ref(['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank']);
 
-    // const matchingNames = computed()
+    const stopWatch = watch(search, () => {
+      console.log('watch function run')
+    })
 
-    return { names, search }
+    const stopEffect = watchEffect(() => {
+      console.log('watchEffect function run', search.value)
+    })
+
+    const matchingNames = computed(() => {
+      const searchTerm = search.value.toLowerCase() // Convert search term to lowercase
+      return names.value.filter((name) => name.toLowerCase().includes(searchTerm)) // Convert names to lowercase for comparison
+    })
+
+    const handleClick = () => {
+      stopWatch()
+      stopEffect()
+    }
+
+    return { names, search, matchingNames, handleClick }
   }
 
 }

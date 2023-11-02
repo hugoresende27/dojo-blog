@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import HomeNewView from '../views/HomeNewView.vue'
+import FinalView from '../views/FinalView.vue'
 
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
     path: '/new',
     name: 'homenew',
     component: HomeNewView
+  },
+  {
+    path: '/final',
+    name: 'final',
+    component: FinalView
   },
 ]
 
