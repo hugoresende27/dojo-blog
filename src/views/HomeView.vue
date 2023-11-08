@@ -60,11 +60,12 @@ export default {
     const updateNinjaTwo = () => {
       ninjaTwo.age = 55
       ninjaTwo.name = 'Gandalf'
-      nameTwo = reactive('BRAAAAA')
+      // nameTwo = reactive('BRAAAAA')
     }
 
     // return { ninjaOne, updateNinjaOne }
 
+    
 
     return { name, age, handleClick, ninjaOne, updateNinjaOne, ninjaTwo, updateNinjaTwo, nameOne, nameTwo}
   },

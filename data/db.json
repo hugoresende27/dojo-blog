@@ -1,0 +1,26 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "marketplace": "REFURBED",
+            "warehouseName": "Recon",
+            "current_stock": 10,
+            "previous_stock": 5,
+            "productId": "12345",
+            "item_code": "RTM12345",
+            "name": "Dummy Product A",
+            "updated_at": "1699463346000"
+        },
+        {
+            "id": 2,
+            "marketplace": "REFURBED",
+            "warehouseName": "Recon",
+            "current_stock": 8,
+            "previous_stock": 3,
+            "productId": "67890",
+            "item_code": "RTM67890",
+            "name": "Dummy Product B",
+            "updated_at": "1699463346000"
+        }
+    ]
+}
