@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import HomeNewView from '../views/HomeNewView.vue'
 import FinalView from '../views/FinalView.vue'
+import Details from '../views/DetailsView.vue'
 
 const routes = [
   {
@@ -19,6 +20,12 @@ const routes = [
     name: 'final',
     component: FinalView
   },
+  {
+    path:'/posts/:id',
+    name : 'details',
+    component: Details,
+    props: true
+  }
 ]
 
 const router = createRouter({

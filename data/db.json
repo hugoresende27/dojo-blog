@@ -9,7 +9,8 @@
             "productId": "12345",
             "item_code": "RTM12345",
             "name": "Dummy Product A",
-            "updated_at": "1699463346000"
+            "updated_at": "1699463346000",
+            "tags": "asdadad"
         },
         {
             "id": 2,
@@ -20,7 +21,8 @@
             "productId": "67890",
             "item_code": "RTM67890",
             "name": "Dummy Product B",
-            "updated_at": "1699463346000"
+            "updated_at": "1699463346000",
+            "tags": "1699463346000"
         }
     ]
 }

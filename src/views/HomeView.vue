@@ -63,9 +63,7 @@ export default {
       // nameTwo = reactive('BRAAAAA')
     }
 
-    // return { ninjaOne, updateNinjaOne }
-
-    
+    // return { ninjaOne, updateNinjaOne } 
 
     return { name, age, handleClick, ninjaOne, updateNinjaOne, ninjaTwo, updateNinjaTwo, nameOne, nameTwo}
   },
